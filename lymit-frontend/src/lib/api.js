@@ -1,4 +1,4 @@
-export const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://lymit-m1-production.up.railway.app';
+export const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://lymit-m1-production-fadf.up.railway.app';
 const TOKEN_KEY = 'jrl_token';
 const USER_KEY = 'jrl_user';
 
