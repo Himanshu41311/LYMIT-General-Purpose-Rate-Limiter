@@ -1,0 +1,234 @@
+/* docs.css */
+.docs-page {
+  background-color: var(--bg-base);
+  min-height: 100vh;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+}
+
+.docs-container {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 100px 40px 60px;
+  gap: 60px;
+  align-items: flex-start;
+  flex: 1;
+}
+
+/* Sidebar Nav */
+.docs-sidebar {
+  position: sticky;
+  top: 100px;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-right: 20px;
+}
+
+.docs-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+.docs-sidebar::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 4px;
+}
+
+.sidebar-title {
+  font-family: var(--font-display);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.sidebar-link {
+  font-size: 14px;
+  color: var(--text-secondary);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+  display: block;
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.sidebar-link.active {
+  background: rgba(6, 182, 212, 0.1);
+  color: var(--accent-cyan);
+  font-weight: 500;
+}
+
+/* Main Content Area */
+.docs-content {
+  padding-bottom: 100px;
+}
+
+.docs-section {
+  margin-bottom: 60px;
+}
+
+.docs-section h1 {
+  font-size: 48px;
+  margin-bottom: 24px;
+  background: linear-gradient(135deg, #fff 0%, #a5a5a5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.docs-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 12px;
+}
+
+.docs-section h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  margin-top: 32px;
+  color: var(--text-primary);
+}
+
+.docs-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.docs-section ul, .docs-section ol {
+  margin-bottom: 20px;
+  padding-left: 24px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.docs-section li {
+  margin-bottom: 8px;
+}
+
+.docs-section strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Callouts / Blockquotes */
+.docs-callout {
+  background: rgba(139, 92, 246, 0.05);
+  border-left: 4px solid var(--accent-purple);
+  padding: 20px;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 32px 0;
+}
+
+.docs-callout p {
+  margin: 0;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Code Blocks */
+.docs-code-block {
+  background: #0d0d12;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin: 24px 0;
+  overflow-x: auto;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.docs-code-block::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.5), transparent);
+}
+
+.docs-code-block code {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+/* Inline Code */
+.docs-section :not(pre) > code {
+  background: rgba(255,255,255,0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9em;
+  color: var(--accent-cyan);
+}
+
+/* Tables */
+.docs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  font-size: 15px;
+}
+
+.docs-table th {
+  text-align: left;
+  padding: 16px;
+  background: rgba(255,255,255,0.05);
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.docs-table td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  color: var(--text-secondary);
+}
+
+.docs-table tr:hover td {
+  background: rgba(255,255,255,0.02);
+}
+
+/* Architecture Graphic */
+.arch-graphic {
+  background: var(--bg-surface-glass);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.arch-node {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  width: 240px;
+}
+
+.arch-node.highlight {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.arch-arrow {
+  color: var(--text-muted);
+}
