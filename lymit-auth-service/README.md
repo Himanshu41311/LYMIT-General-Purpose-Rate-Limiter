@@ -1,4 +1,4 @@
-# jrl-auth-service
+# lymit-auth-service
 
 A Spring Boot service that owns user identity **and** route/policy
 registration — it's the "admin service" the rate limiter proxy was always
